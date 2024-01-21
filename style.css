@@ -1,7 +1,7 @@
 body {
   background-color: #303030;
   color: #ffffff;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 #container {
   width: 1000px;
@@ -9,9 +9,11 @@ body {
   margin-right: auto;
 }
 
-.ractangle {
+.rectangle {
   width: 960px;
   margin: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 .square {
   width: 50%;
@@ -19,16 +21,17 @@ body {
 }
 #logo {
   float: left;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 70px;
   width: 600px;
   margin-left: 7px;
 }
 
 #zegar {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 70px;
-  text-align: right;
+  text-align: left;
+  width: 250px;
 }
 .tile1 {
   margin: 10px;
@@ -89,10 +92,13 @@ body {
   height: 142px;
   background-color: #d94348;
   float: left;
+  transition: translate 0.5s;
 }
 .yt:hover {
   background-color: #c83237;
+  translate: 0 -5px;
 }
+
 .fb {
   margin: 10px;
   width: 105px;
@@ -149,4 +155,11 @@ a.sociallink {
   display: block;
   width: 105px;
   height: 142px;
+}
+.tile {
+  transition: transform 0.5s;
+  transition-timing-function: cubic-bezier(0.47, -0.02, 0.7, 3);
+}
+.tile:hover {
+  transform: scale(110%);
 }
